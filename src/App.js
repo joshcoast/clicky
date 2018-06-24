@@ -20,7 +20,7 @@ class App extends Component {
     cards
   };
 
-  removeFriend = id => {
+  pickCard = id => {
     // Filter this.state.cards for cards with an id not equal to the id being removed
     const cards = this.state.cards.sort(function () {return 0.5 - Math.random()});
     // Set this.state.cards equal to the new cards array
@@ -44,7 +44,7 @@ class App extends Component {
         <main className="container">
           {this.state.cards.map(card => (
             <MemCard
-              removeFriend={this.removeFriend}
+              pickCard={this.pickCard}
               id={card.id}
               key={card.id}
               name={card.name}
