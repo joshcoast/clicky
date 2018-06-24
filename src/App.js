@@ -7,6 +7,9 @@ import Footer from "./components/Footer";
 import MemCard from "./components/MemCard";
 import cards from "./cards.json";
 
+//keep track of picked/chosen cards
+let picked =[];
+
 
 
 
@@ -21,9 +24,16 @@ class App extends Component {
     // Filter this.state.cards for cards with an id not equal to the id being removed
     const cards = this.state.cards.sort(function () {return 0.5 - Math.random()});
     // Set this.state.cards equal to the new cards array
-
+    if (picked.includes(id)) {
+      picked.length = 0;
+      console.log('FAIL');
+    }else{
+      picked.push(id);
+      console.log('okay');
+    }
+    console.log(picked);
+    
     this.setState({ cards });
-
   };
 
   render() {
