@@ -19,8 +19,9 @@ class App extends Component {
 
   removeFriend = id => {
     // Filter this.state.cards for cards with an id not equal to the id being removed
-    const cards = this.state.cards.filter(card => card.id !== id).sort(function () {return 0.5 - Math.random()});
+    const cards = this.state.cards.sort(function () {return 0.5 - Math.random()});
     // Set this.state.cards equal to the new cards array
+
     this.setState({ cards });
 
   };
