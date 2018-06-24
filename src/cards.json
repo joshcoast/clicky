@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "birdperson",
+    "image": "https://clicky-game.netlify.com/assets/images/birdperson.png"
+  },
+  {
+    "id": 2,
+    "name": "gianthead",
+    "image": "https://clicky-game.netlify.com/assets/images/gianthead.png"
+  },
+  {
+    "id": 3,
+    "name": "evilmorty",
+    "image": "https://clicky-game.netlify.com/assets/images/evilmorty.png"
+  },
+  {
+    "id": 4,
+    "name": "beth",
+    "image": "https://clicky-game.netlify.com/assets/images/Beth.png"
+  },
+  {
+    "id": 5,
+    "name": "goldenford",
+    "image": "https://clicky-game.netlify.com/assets/images/goldenford.png"
+  },
+  {
+    "id": 6,
+    "name": "summer",
+    "image": "https://clicky-game.netlify.com/assets/images/summer.png"
+  },
+  {
+    "id": 7,
+    "name": "morty",
+    "image": "https://clicky-game.netlify.com/assets/images/morty.png"
+  },
+  {
+    "id": 8,
+    "name": "meeseeks",
+    "image": "https://clicky-game.netlify.com/assets/images/meeseeks.png"
+  },
+  {
+    "id": 9,
+    "name": "mr",
+    "image": "https://clicky-game.netlify.com/assets/images/mr.png"
+  },
+  {
+    "id": 10,
+    "name": "rick",
+    "image": "https://clicky-game.netlify.com/assets/images/rick.png"
+  },
+  {
+    "id": 12,
+    "name": "jessica",
+    "image": "https://clicky-game.netlify.com/assets/images/jessica.png"
+  }
+]
