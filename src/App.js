@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 //-----
-import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MemCard from "./components/MemCard";
@@ -11,13 +10,12 @@ import cards from "./cards.json";
 let picked =[];
 
 
-
-
 class App extends Component {
 
   // Setting this.state.cards to the cards json array
   state = {
-    cards
+    cards,
+    count: 0
   };
 
   pickCard = id => {
@@ -26,9 +24,11 @@ class App extends Component {
     // Set this.state.cards equal to the new cards array
     if (picked.includes(id)) {
       picked.length = 0;
+      this.setState({ count: 0 });
       console.log('FAIL');
     }else{
       picked.push(id);
+      this.setState({ count: this.state.count + 1 });
       console.log('okay');
     }
     console.log(picked);
@@ -39,7 +39,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav />
+        <nav className="navbar">
+          <ul>
+            <li className="brand"><a href="/">Clicky Game</a></li>
+            <li>Click an image to begin!</li>
+            <li>Score: {this.state.count} | Top Score: 0</li>
+            <li></li>
+          </ul>
+        </nav>
         <Header />
         <main className="container">
           {this.state.cards.map(card => (
