@@ -15,7 +15,8 @@ class App extends Component {
   state = {
     cards,
     count: 0,
-    topCount: 0
+    topCount: 0,
+    message: "Pick a pic!"
   };
 
   pickCard = id => {
@@ -24,11 +25,12 @@ class App extends Component {
     // Set this.state.cards equal to the new cards array
     if (picked.includes(id)) {
       picked.length = 0;
-      this.setState({ count: 0 });
+      this.setState({ count: 0, message: "You guessed incorrectly!" });
       console.log('FAIL');
     }else{
       picked.push(id);
-      this.setState({ count: this.state.count + 1 });
+      this.s
+      this.setState({ count: this.state.count + 1, message: "Good job!" });
       if (this.state.count === this.state.topCount) {
         this.setState({ topCount: this.state.topCount + 1 });
       }
@@ -44,7 +46,7 @@ class App extends Component {
         <nav className="navbar">
           <ul>
             <li className="brand"><a href="/">Clicky Game</a></li>
-            <li>Click an image to begin!</li>
+            <li>{this.state.message}</li>
             <li>Score: {this.state.count} | Top Score: {this.state.topCount}</li>
           </ul>
         </nav>
