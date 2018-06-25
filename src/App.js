@@ -25,11 +25,10 @@ class App extends Component {
     // Set this.state.cards equal to the new cards array
     if (picked.includes(id)) {
       picked.length = 0;
-      this.setState({ count: 0, message: "You guessed incorrectly!" });
+      this.setState({ count: 0, message: "You guessed poorly!" });
       console.log('FAIL');
     }else{
       picked.push(id);
-      this.s
       this.setState({ count: this.state.count + 1, message: "Good job!" });
       if (this.state.count === this.state.topCount) {
         this.setState({ topCount: this.state.topCount + 1 });
