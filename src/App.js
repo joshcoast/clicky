@@ -9,13 +9,13 @@ import cards from "./cards.json";
 //keep track of picked/chosen cards
 let picked =[];
 
-
 class App extends Component {
 
-  // Setting this.state.cards to the cards json array
+  // Setting this.state.cards to the cards json array, score, and top score count 
   state = {
     cards,
-    count: 0
+    count: 0,
+    topCount: 0
   };
 
   pickCard = id => {
@@ -29,10 +29,12 @@ class App extends Component {
     }else{
       picked.push(id);
       this.setState({ count: this.state.count + 1 });
+      if (this.state.count === this.state.topCount) {
+        this.setState({ topCount: this.state.topCount + 1 });
+      }
       console.log('okay');
     }
     console.log(picked);
-    
     this.setState({ cards });
   };
 
@@ -43,8 +45,7 @@ class App extends Component {
           <ul>
             <li className="brand"><a href="/">Clicky Game</a></li>
             <li>Click an image to begin!</li>
-            <li>Score: {this.state.count} | Top Score: 0</li>
-            <li></li>
+            <li>Score: {this.state.count} | Top Score: {this.state.topCount}</li>
           </ul>
         </nav>
         <Header />
