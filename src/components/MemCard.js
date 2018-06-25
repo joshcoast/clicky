@@ -5,5 +5,3 @@ const MemCard = props => (
 );
 
 export default MemCard;
-
-
